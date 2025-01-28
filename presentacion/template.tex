@@ -167,7 +167,7 @@
 \usepackage{bbding} %palomitas checkmark
 \usepackage{pifont}
 \usepackage{lipsum,tabularx}
-
+\usepackage{soul}
 \newcounter{loopcntr}
 
 %----------------------------------------------------------------------------------------
@@ -296,10 +296,10 @@
   \item .. limitaciones y restricciones conocidas
   \item .. nivel de rendimiento o calidad que se espera del sistema
   \end{enumerate}
-  \vspace{0.5cm}
+  \bigskip % Vertical whitespace
   \pause
-  
   La primera definición es para \textbf{requerimientos funcionales.}\\
+  \bigskip % Vertical whitespace
   La segunda y tercera son \textbf{requerimientos no funcionales.}
   
 \end{frame}
@@ -310,13 +310,13 @@
   \item Modelado de requerimientos
     \begin{itemize}
     \item grafos - UML
-    \item formulas - representaciones matemáticas
+    \item fórmulas - representaciones matemáticas
     \item código - pseudocode / prototipos
     \end{itemize}
   \end{itemize}
-  \vspace{0.5cm}
+  \bigskip % Vertical whitespace
   \pause
-  Limitantes
+  \st{Limitantes}
   \begin{itemize}
   \item Objetivos de la tarea a realizar
   \item Stakeholders (Interesados)
@@ -325,16 +325,17 @@
 \end{frame}
 
 \begin{frame}{Problemas en toma de requerimientos}
+  %\textsl{Requerimientos ..} 
   \begin{itemize}
-  \item Incompletos / Ocultos 
-  \item Inconsistentes
-  \item Terminología
-  \item Responsabilidades no claras
-  \item Comunicación
-  \item Cambio de objetivos
-  \item Requerimientos inviables
-  \item Los interesados desconocen ciertos procesos
-  \item Requerimientos no especificados
+  \item incompletos / ocultos 
+  \item inconsistentes
+  \item con diferentes terminologías
+  \item con responsabilidades no claras
+  \item comunicación
+  \item cambio de objetivos
+  \item requerimientos inviables
+  \item los interesados desconocen ciertos procesos
+  \item requerimientos no especificados
   \end{itemize}
 \end{frame}
 
@@ -344,8 +345,9 @@
 \begin{itemize}
     \item Una norma para la ingeniería de requisitos en sistemas y software.
     \item Proporciona directrices para los procesos y actividades relacionados con la ingeniería de requisitos a lo largo del ciclo de vida del sistema o software.
+      \item Sucesor del IEEE 1233 desde el 2011.
 \end{itemize}
-\vspace{0.5cm}
+\bigskip % Vertical whitespace
 Propósito
 \begin{itemize}
     \item Asegurar que los requisitos estén bien definidos, sean medibles y trazables.
@@ -385,8 +387,8 @@ Propósito
 %\end{frame}
 
 % Sección 4: Cómo Usar la Norma
-\begin{frame}{Cómo Usar IEEE 29148-2018}
-\framesubtitle{Pasos para Aplicar la Norma}
+\begin{frame}{¿Cómo usar IEEE 29148?}
+\framesubtitle{Pasos para aplicar la norma}
 \begin{itemize}
     \item \textbf{Elicitación:} Recopilar requisitos de los interesados.
     \item \textbf{Análisis:} Analizar requisitos para verificar su viabilidad, consistencia y completitud.
@@ -394,7 +396,8 @@ Propósito
     \item \textbf{Validación:} Verificar que los requisitos satisfacen las necesidades de los interesados.
     \item \textbf{Gestión:} Rastrear cambios y mantener la trazabilidad.
 \end{itemize}
-La norma incluye plantillas para documentos de requisitos, como la Especificación de Requisitos de Software (SRS).\
+\bigskip % Vertical whitespace
+La norma incluye plantillas para documentos de requisitos, como la especificación de requisitos de software (SRS).
 \end{frame}
 
 \begin{frame}{Plantillas}
@@ -404,14 +407,14 @@ La norma incluye plantillas para documentos de requisitos, como la Especificaci�
 \end{frame}
 
 % Sección 5: Cuándo Usar la Norma
-\begin{frame}{Cuándo Usar IEEE 29148-2018}
+\begin{frame}{¿Cuándo usar IEEE 29148}
 \begin{itemize}
-    \item \textbf{Proyectos de Desarrollo de Software:} Especialmente sistemas grandes, complejos o de seguridad crítica.
-    \item \textbf{Ingeniería de Sistemas:} Para sistemas que incluyen componentes de hardware y software.
-    \item \textbf{Industrias Reguladas:} Como aeroespacial, automotriz, salud y defensa, donde el cumplimiento de normas es obligatorio.
+    \item \textbf{Proyectos de desarrollo de software:} Especialmente sistemas grandes, complejos o de seguridad crítica.
+    \item \textbf{Ingeniería de sistemas:} Para sistemas que incluyen componentes de hardware y software.
+    \item \textbf{Industrias reguladas:} Como aeroespacial, automotriz, salud y defensa, donde el cumplimiento de normas es obligatorio.
 \end{itemize}
-\vspace{0.5cm}
-Cuándo Aplicar
+\bigskip % Vertical whitespace
+¿Cuándo aplicarlo?
 \begin{itemize}
     \item Durante las fases iniciales de un proyecto para definir requisitos.
     \item A lo largo del ciclo de vida del proyecto para gestionar cambios y asegurar la trazabilidad.
@@ -428,6 +431,7 @@ Beneficios
 \item Ayuda a identificar y mitigar riesgos temprano en el proyecto.
 \item Facilita la adherencia a normas regulatorias e industriales.
 \end{itemize}
+\bigskip % Vertical whitespace
 Consideraciones
 \begin{itemize}
 \item Asegurar que todos los miembros del equipo estén capacitados en las prácticas de la norma.
@@ -437,51 +441,60 @@ Consideraciones
 
 \section{The Easy Approach to Requirements Syntax: EARS [\cite{ears}]}
 
-\begin{frame}{The Easy Approach to Requirements Syntax: EARS}
+\begin{frame}{The \textcolor{red}{E}asy \textcolor{red}{A}pproach to \textcolor{red}{R}equirements \textcolor{red}{S}yntax: \textcolor{red}{EARS}}
   Método útil y popular que ha sido adoptado por muchas organizaciones en el campo de la ingeniería de requisitos. Esto se debe a sus patrones de sintaxis fáciles de aprender y aplicar. EARS es un método simple y lógico para construir requisitos en lenguaje natural claros.\\
-  \vspace{1cm}
+  \bigskip % Vertical whitespace
   \begin{itemize}
   \item Formulado en Rolls-Royce y presentado en el 2009
   \item Diferencia entre cinco tipos de requerimientos
+  \item Reduce o incluso elimina los problemas comunes que se encuentran en los requisitos en lenguaje natural.
   \end{itemize}
   
 \end{frame}
 
-\begin{frame}{Patrones EARS}
-
+\begin{frame}{Sintaxis EARS}
+  
   \tiny{
     \begin{table}[h!]
-\centering
-\begin{tabular}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{8cm}|}
-\hline
-\textbf{Pattern} & \textbf{Description and Example} \\
-\hline
-\textbf{Ubiquitous} & 
-A requirement that is always true. \\
-& \textbf{Example:} The system shall always display the current date and time. \\
-\hline
-\textbf{Event-Driven} & 
-A requirement triggered by a specific event. \\
-& \textbf{Example:} When the user presses the "Submit" button, the system shall validate the form data. \\
-\hline
-\textbf{Unwanted Behavior} & 
-A requirement that specifies how the system should handle unwanted or unexpected behavior. \\
-& \textbf{Example:} If the user enters an invalid password, the system shall display an error message and allow retries up to three times. \\
-\hline
-\textbf{State-Driven} & 
-A requirement that depends on the system being in a specific state. \\
-& \textbf{Example:} If the system is in "Maintenance Mode," it shall reject all user requests. \\
-\hline
-\textbf{Optional Feature} & 
-A requirement that applies only if a specific feature is enabled. \\
-& \textbf{Example:} If the "Advanced Search" feature is enabled, the system shall allow filtering by date range. \\
-\hline
-\textbf{Complex} & 
-A requirement that combines multiple conditions or scenarios. \\
-& \textbf{Example:} If the user is logged in and has administrator privileges, and the system is not in "Maintenance Mode," then the system shall allow access to the admin dashboard. \\
-\hline
-\end{tabular}
-\end{table}
+      \centering
+      \begin{tabular}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{10cm}|}
+        \hline
+        \textbf{Patrón} & \textbf{Descripción y ejemplo} \\
+        \hline
+        \textbf{Ubicuo} & 
+        Un requisito que siempre es verdadero. \\
+        & The \texttt{<system name>} shall \texttt{<system response>} \\
+        & \textbf{Ejemplo:} 
+        El sistema siempre mostrará la fecha y hora actuales. \\
+        \hline
+        \textbf{Impulsado por Eventos} & 
+        Un requisito que se activa por un evento específico. \\
+        & When \texttt{<trigger>}, the \texttt{<system name>} shall \texttt{<system response>} \\
+        & \textbf{Ejemplo:} 
+        Cuando el usuario presione el botón \textit{Enviar}, el sistema validará los datos del formulario. \\
+        \hline
+        \textbf{Impulsado por Estados} & 
+        Un requisito que depende de que el sistema esté en un estado específico. \\
+        & While \texttt{<precondition(s)>}, the \texttt{<system name>} shall \texttt{<system response>} \\
+        & \textbf{Ejemplo:} Si el sistema está en \textit{Modo de Mantenimiento}, rechazará todas las solicitudes de los usuarios. \\
+        \hline
+        \textbf{Característica Opcional} & 
+        Un requisito que aplica solo si una característica específica está habilitada. \\
+        & Where \texttt{<feature is included>}, the \texttt{<system name>} shall \texttt{<system response>} \\
+        & \textbf{Ejemplo:} Si la función \textit{Búsqueda Avanzada} está habilitada, el sistema permitirá filtrar por rango de fechas. \\
+        \hline
+        \textbf{Comportamiento No Deseado} & 
+        Un requisito que especifica cómo el sistema debe manejar comportamientos no deseados o inesperados. \\
+        & If \texttt{<trigger>}, then the \texttt{<system name>} shall \texttt{<system response>} \\
+        & \textbf{Ejemplo:} Si el usuario ingresa una contraseña inválida, el sistema mostrará un mensaje de error y permitirá reintentos hasta tres veces. \\
+        \hline
+        \textbf{Complejo} & 
+        Un requisito que combina múltiples condiciones o escenarios. \\
+        & While \texttt{<precondition(s)>}, When \texttt{<trigger>}, the \texttt{<system name>} shall \texttt{<system response>} \\
+        & \textbf{Ejemplo:} Mientras la aeronave esté en tierra, cuando se ordene el empuje inverso, el sistema de control del motor deberá habilitar el empuje inverso. \\
+        \hline
+      \end{tabular}
+    \end{table}
   }
 \end{frame}
 
