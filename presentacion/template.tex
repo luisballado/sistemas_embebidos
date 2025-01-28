@@ -278,12 +278,12 @@
   \begin{center}
     \begin{minipage}{0.38\linewidth}
       \includegraphics[width=\linewidth]{ciclo_vida_software.png}
-      \captionof{figure}{clásico}
+      \captionof{figure}{ciclo de vida clásico}
     \end{minipage}%
     \hfill
     \begin{minipage}{0.49\linewidth}
       \includegraphics[width=\linewidth]{DevOps.png}
-      \captionof{figure}{moderno}
+      \captionof{figure}{ciclo de vida moderno}
     \end{minipage}
     \captionof{figure}{Ciclo de vida del software}
   \end{center}
@@ -328,7 +328,7 @@
   \begin{itemize}
   \item Incompletos / Ocultos 
   \item Inconsistentes
-  \item Terminologia
+  \item Terminología
   \item Responsabilidades no claras
   \item Comunicación
   \item Cambio de objetivos
@@ -338,9 +338,9 @@
   \end{itemize}
 \end{frame}
 
-\section{IEEE 29148-2011}
-\begin{frame}{Introducción a IEEE 29148-2011}
-\framesubtitle{¿Qué es IEEE 29148-2011?}
+\section{IEEE 29148 [\cite{ieee}]}
+\begin{frame}{Introducción a IEEE 29148}
+\framesubtitle{¿Qué es IEEE 29148?}
 \begin{itemize}
     \item Una norma para la ingeniería de requisitos en sistemas y software.
     \item Proporciona directrices para los procesos y actividades relacionados con la ingeniería de requisitos a lo largo del ciclo de vida del sistema o software.
@@ -385,7 +385,7 @@ Propósito
 %\end{frame}
 
 % Sección 4: Cómo Usar la Norma
-\begin{frame}{Cómo Usar IEEE 29148-2011}
+\begin{frame}{Cómo Usar IEEE 29148-2018}
 \framesubtitle{Pasos para Aplicar la Norma}
 \begin{itemize}
     \item \textbf{Elicitación:} Recopilar requisitos de los interesados.
@@ -398,15 +398,13 @@ La norma incluye plantillas para documentos de requisitos, como la Especificaci�
 \end{frame}
 
 \begin{frame}{Plantillas}
-  \begin{itemize}
-  \item Que plantillas 
-  \item ..
-  \item ..
-  \end{itemize}
+  \centering
+  \includegraphics[width=0.4\linewidth]{plantilla.png}
+  \captionof{figure}{Plantilla Software Requirements Specification}
 \end{frame}
 
 % Sección 5: Cuándo Usar la Norma
-\begin{frame}{Cuándo Usar IEEE 29148-2011}
+\begin{frame}{Cuándo Usar IEEE 29148-2018}
 \begin{itemize}
     \item \textbf{Proyectos de Desarrollo de Software:} Especialmente sistemas grandes, complejos o de seguridad crítica.
     \item \textbf{Ingeniería de Sistemas:} Para sistemas que incluyen componentes de hardware y software.
@@ -437,26 +435,66 @@ Consideraciones
 \end{itemize}
 \end{frame}
 
-\section{The Easy Approach to Requirements Syntax: EARS}
+\section{The Easy Approach to Requirements Syntax: EARS [\cite{ears}]}
 
 \begin{frame}{The Easy Approach to Requirements Syntax: EARS}
-  Método útil y popular que ha sido adoptado por muchas organizaciones en el campo de la ingeniería de requisitos. Esto se debe a sus patrones de sintaxis fáciles de aprender y aplicar. EARS es un método simple y lógico para construir requisitos en lenguaje natural claros.
-\end{frame}
-
-\begin{frame}{Patrones EARS}
+  Método útil y popular que ha sido adoptado por muchas organizaciones en el campo de la ingeniería de requisitos. Esto se debe a sus patrones de sintaxis fáciles de aprender y aplicar. EARS es un método simple y lógico para construir requisitos en lenguaje natural claros.\\
+  \vspace{1cm}
+  \begin{itemize}
+  \item Formulado en Rolls-Royce y presentado en el 2009
+  \item Diferencia entre cinco tipos de requerimientos
+  \end{itemize}
   
 \end{frame}
 
-\begin{frame}{Ejemplos:}
-  \begin{itemize}
-  \item Ubicuidad: el software debe estar escrito en Python.
-  \item Impulsado por eventos: cuando se recibe el dinero, la aplicación debe enviar una notificación.
-  \item Comportamiento no deseado: si la contraseña se ingresa incorrectamente, la aplicación mostrará un mensaje de error.
-  \item Impulsado por estado: cuando se está en modo No molestar, el software silenciará las llamadas entrantes.
-  \item Opcional: cuando el puerto DP está presente, el software debe permitir al usuario mostrar la frecuencia de actualización máxima admitida.
-  \item Complejo: cuando se presiona el botón de marcha atrás una vez, si el software detecta que la marcha atrás no está en su lugar, el software mostrará una notificación emergente.
-  \end{itemize}
+\begin{frame}{Patrones EARS}
+
+  \tiny{
+    \begin{table}[h!]
+\centering
+\begin{tabular}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{8cm}|}
+\hline
+\textbf{Pattern} & \textbf{Description and Example} \\
+\hline
+\textbf{Ubiquitous} & 
+A requirement that is always true. \\
+& \textbf{Example:} The system shall always display the current date and time. \\
+\hline
+\textbf{Event-Driven} & 
+A requirement triggered by a specific event. \\
+& \textbf{Example:} When the user presses the "Submit" button, the system shall validate the form data. \\
+\hline
+\textbf{Unwanted Behavior} & 
+A requirement that specifies how the system should handle unwanted or unexpected behavior. \\
+& \textbf{Example:} If the user enters an invalid password, the system shall display an error message and allow retries up to three times. \\
+\hline
+\textbf{State-Driven} & 
+A requirement that depends on the system being in a specific state. \\
+& \textbf{Example:} If the system is in "Maintenance Mode," it shall reject all user requests. \\
+\hline
+\textbf{Optional Feature} & 
+A requirement that applies only if a specific feature is enabled. \\
+& \textbf{Example:} If the "Advanced Search" feature is enabled, the system shall allow filtering by date range. \\
+\hline
+\textbf{Complex} & 
+A requirement that combines multiple conditions or scenarios. \\
+& \textbf{Example:} If the user is logged in and has administrator privileges, and the system is not in "Maintenance Mode," then the system shall allow access to the admin dashboard. \\
+\hline
+\end{tabular}
+\end{table}
+  }
 \end{frame}
+
+%\begin{frame}{Ejemplos:}
+%  \begin{itemize}
+%  \item Ubicuidad: El software debe estar escrito en Python.
+%  \item Impulsado por eventos: Cuando se recibe el dinero, la aplicación debe enviar una notificación.
+%  \item Comportamiento no deseado: Si la contraseña se ingresa incorrectamente, la aplicación mostrará un mensaje de error.
+%  \item Impulsado por estado: Cuando se está en modo No molestar, el software silenciará las llamadas entrantes.
+%  \item Opcional: Cuando el puerto DP está presente, el software debe permitir al usuario mostrar la frecuencia de actualización máxima admitida.
+%  \item Complejo: Cuando se presiona el botón de marcha atrás una vez, si el software detecta que la marcha atrás no está en su lugar, el software mostrará una notificación emergente.
+%  \end{itemize}
+%\end{frame}
 
 \begin{frame}{¿Cuándo no usar EARS?}
   \begin{enumerate}
@@ -467,25 +505,25 @@ Consideraciones
 \end{frame}
 
 % Sección 9: Conclusión
-\begin{frame}{Conclusión}
-\framesubtitle{Resumen}
-\begin{itemize}
-    \item IEEE 29148-2011 es una norma integral para la ingeniería de requisitos que ayuda a garantizar sistemas y software de alta calidad.
-    \item Proporciona un enfoque estructurado para definir, documentar y gestionar requisitos.
-\end{itemize}
+%\begin{frame}{Conclusión}
+%\framesubtitle{Resumen}
+%\begin{itemize}
+%    \item IEEE 29148 es una norma integral para la ingeniería de requisitos que ayuda a garantizar sistemas y software de alta calidad.
+%    \item Proporciona un enfoque estructurado para definir, documentar y gestionar requisitos.
+%\end{itemize}
 
-\framesubtitle{Reflexiones Finales}
-\begin{itemize}
-    \item Adoptar IEEE 29148-2011 puede llevar a proyectos más exitosos, especialmente en entornos complejos o regulados.
-    \item Considerar la norma como una herramienta valiosa en tu kit de ingeniería de sistemas y software.
-\end{itemize}
-\end{frame}
+%\framesubtitle{Reflexiones Finales}
+%\begin{itemize}
+%    \item Adoptar IEEE 29148 puede llevar a proyectos más exitosos, especialmente en entornos complejos o regulados.
+%    \item Considerar la norma como una herramienta valiosa en tu kit de ingeniería de sistemas y software.
+%\end{itemize}
+%\end{frame}
 
 
 \begin{frame}[allowframebreaks,noframenumbering]{Bibliografía}
   \tiny
   \bibliographystyle{abbrvnat}
-  \bibliography{test}
+  \bibliography{biblio}
 \end{frame}
 
 \end{document} 

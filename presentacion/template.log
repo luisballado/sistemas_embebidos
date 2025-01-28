@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  27 JAN 2025 18:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.15)  27 JAN 2025 19:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1435,7 +1435,7 @@ LaTeX Info: Redefining \% on input line 1.
 ) [2
 
 ]
-<Images//ciclo_vida_software.png, id=44, 426.84468pt x 332.74312pt>
+<Images//ciclo_vida_software.png, id=52, 426.84468pt x 332.74312pt>
 File: Images//ciclo_vida_software.png Graphic file (type png)
 <use Images//ciclo_vida_software.png>
 Package pdftex.def Info: Images//ciclo_vida_software.png  used on input line 29
@@ -1479,7 +1479,7 @@ LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <6> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 290.
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
 (Font)              scaled to size 5.69998pt on input line 290.
-<Images//DevOps.png, id=46, 1003.75pt x 572.1375pt>
+<Images//DevOps.png, id=54, 1003.75pt x 572.1375pt>
 File: Images//DevOps.png Graphic file (type png)
 <use Images//DevOps.png>
 Package pdftex.def Info: Images//DevOps.png  used on input line 290.
@@ -1518,7 +1518,36 @@ LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
 
 ] [8
 
-] (./template.toc
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 341.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 341.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 341.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 341.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 341.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 341.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 341.
+
+(./template.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 ) [9
@@ -1530,31 +1559,76 @@ LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
 
 ] [11
 
-] [12
+]
+<Images//plantilla.png, id=118, 457.71pt x 549.05125pt>
+File: Images//plantilla.png Graphic file (type png)
+<use Images//plantilla.png>
+Package pdftex.def Info: Images//plantilla.png  used on input line 404.
+(pdftex.def)             Requested size: 173.33496pt x 207.92114pt.
 
-] [13
+Overfull \vbox (9.99892pt too high) detected at line 404
+ []
+
+[12
+
+ <./Images//plantilla.png>] [13
 
 ] [14
 
-] (./template.toc
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 438.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 438.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\NAT@ctype' on input line 438.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 438.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 438.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\let' on input line 438.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\new@ifnextchar' on input line 438.
+
+(./template.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 ) [15
 
 ] [16
 
-] [17
+]
+LaTeX Font Info:    Font shape `OT1/opensans-TLF/b/n' will be
+(Font)              scaled to size 6.0pt on input line 486.
+LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/n' will be
+(Font)              scaled to size 5.0pt on input line 486.
+ [17
 
 ] [18
 
-] [19
+] (./template.bbl
+LaTeX Font Info:    Font shape `OT1/opensans-TLF/m/it' will be
+(Font)              scaled to size 6.0pt on input line 12.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 1
+3.
 
-]
-[20
-
-]
-No file template.bbl.
-[21
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)) [19
 
 ]
 \tf@nav=\write6
@@ -1566,29 +1640,37 @@ No file template.bbl.
 \tf@snm=\write8
 \openout8 = `template.snm'.
 
- (./template.aux
+ [20]
+(./template.aux
 LaTeX Info: Redefining \. on input line 30.
 LaTeX Info: Redefining \% on input line 30.
 )
+
+LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
+
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: C6FD6C23E79D12BF86B7AC3458C63DFA;518.
+(rerunfilecheck)             Checksum: 88B000EBF9A42AE67E8A17FB9773CB3C;667.
  ) 
 Here is how much of TeX's memory you used:
- 33213 strings out of 478287
- 656609 string characters out of 5849289
- 1009238 words of memory out of 5000000
- 50633 multiletter control sequences out of 15000+600000
- 489613 words of font info for 87 fonts, out of 8000000 for 9000
+ 33303 strings out of 478287
+ 658129 string characters out of 5849289
+ 1016328 words of memory out of 5000000
+ 50712 multiletter control sequences out of 15000+600000
+ 492577 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,11n,131p,450b,895s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/opensans/a_n3lhbv.enc}</usr/sh
-are/texlive/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Bold.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on template.pdf (21 pages, 276811 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/opensans/a_iz27ck.enc}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/opensans/a_n3lhbv.enc}</usr/share/texlive/texmf-dist/fonts/t
+ype1/ascender/opensans/OpenSans-Bold.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/ascender/opensans/OpenSans-Italic.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/ascender/opensans/OpenSans-Regular.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/palatino/uplr8a.pfb>
+Output written on template.pdf (20 pages, 351568 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 161 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 219 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 90 words of extra memory for PDF output out of 10000 (max. 10000000)
 

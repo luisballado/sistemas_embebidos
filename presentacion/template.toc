@@ -1,4 +1,4 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {1}{Introducción}{2}{0}{1}
-\beamer@sectionintoc {2}{IEEE 29148-2011}{9}{0}{2}
-\beamer@sectionintoc {3}{The Easy Approach to Requirements Syntax: EARS}{15}{0}{3}
+\beamer@sectionintoc {2}{IEEE 29148 [\cite {ieee}]}{9}{0}{2}
+\beamer@sectionintoc {3}{The Easy Approach to Requirements Syntax: EARS [\cite {ears}]}{15}{0}{3}
