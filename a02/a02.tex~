@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{xcolor} % Para texto coloreado
+\begin{document}
+
+\section*{Especificaciones Funcionales y No Funcionales para el Control de un Motor DC con Encoder}
+
+\subsection*{Especificaciones Funcionales}
+\begin{enumerate}
+    \item \textbf{Control de Velocidad:}
+    \begin{itemize}
+        \item \textbf{Ubicuo:} Mientras el motor esté en funcionamiento, el sistema deberá ajustar la velocidad del motor en función de la señal de retroalimentación del encoder.
+        \item \textbf{Impulsado por Eventos:} Cuando el usuario ingrese un valor de velocidad deseada, el sistema deberá ajustar el voltaje aplicado al motor para alcanzar la velocidad especificada.
+        \item \textbf{Impulsado por Estados:} Si la velocidad medida por el encoder es mayor que la velocidad deseada, el sistema deberá reducir el voltaje aplicado al motor.
+    \end{itemize}
+
+    \item \textbf{Control de Dirección:}
+    \begin{itemize}
+        \item \textbf{Impulsado por Eventos:} Cuando el usuario seleccione la dirección "Horaria" o "Antihoraria", el sistema deberá invertir la polaridad del voltaje aplicado al motor.
+    \end{itemize}
+
+    \item \textbf{Parada de Emergencia:}
+    \begin{itemize}
+        \item \textbf{Impulsado por Eventos:} Cuando el usuario presione el botón de "Parada de Emergencia", el sistema deberá cortar inmediatamente el suministro de voltaje al motor.
+    \end{itemize}
+
+    \item \textbf{Monitoreo de Posición:}
+    \begin{itemize}
+        \item \textbf{Ubicuo:} Mientras el motor esté en funcionamiento, el sistema deberá monitorear la posición del motor utilizando la señal del encoder.
+        \item \textbf{Impulsado por Eventos:} Cuando el motor alcance una posición específica, el sistema deberá detener el motor y notificar al usuario.
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Especificaciones No Funcionales}
+\begin{enumerate}
+    \item \textbf{Rendimiento:}
+    \begin{itemize}
+        \item \textbf{Ubicuo:} Mientras el sistema esté en funcionamiento, el sistema deberá procesar la señal del encoder con una frecuencia de muestreo de al menos 1 kHz.
+        \item \textbf{Complejo:} Si el sistema detecta una variación en la velocidad del motor mayor al 5% de la velocidad deseada, el sistema deberá ajustar el voltaje en menos de 100 ms.
+    \end{itemize}
+
+    \item \textbf{Seguridad:}
+    \begin{itemize}
+        \item \textbf{Comportamiento No Deseado:} Si el sistema detecta una corriente en el motor superior al límite seguro, el sistema deberá cortar el suministro de voltaje y notificar al usuario.
+    \end{itemize}
+
+    \item \textbf{Usabilidad:}
+    \begin{itemize}
+        \item \textbf{Impulsado por Eventos:} Cuando el usuario inicie el sistema, el sistema deberá mostrar una interfaz gráfica intuitiva con opciones para ajustar la velocidad, dirección y posición del motor.
+    \end{itemize}
+
+    \item \textbf{Confiabilidad:}
+    \begin{itemize}
+        \item \textbf{Ubicuo:} Mientras el sistema esté en funcionamiento, el sistema deberá garantizar un tiempo de actividad (uptime) del 99.9%.
+    \end{itemize}
+\end{enumerate}
+
+\end{document}
