@@ -1,0 +1,5 @@
+source "/home/luis/esp/esp-idf/components/app_update/Kconfig.projbuild"
+source "/home/luis/esp/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/home/luis/esp/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/home/luis/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/home/luis/Documents/cinvestav/sistemas_embebidos/codes/esp32/blink/main/Kconfig.projbuild"
