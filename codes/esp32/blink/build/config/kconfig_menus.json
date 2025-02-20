@@ -1802,27 +1802,6 @@
     {
         "children": [
             {
-                "children": [],
-                "depends_on": null,
-                "help": "GPIO number (IOxx) to blink on and off.\n\nSome GPIOs are used for other purposes (flash connections, etc.) and cannot be used to blink.\n\nGPIOs 35-39 are input-only so cannot be used as outputs.",
-                "id": "BLINK_GPIO",
-                "name": "BLINK_GPIO",
-                "range": [
-                    0,
-                    34
-                ],
-                "title": "Blink GPIO number",
-                "type": "int"
-            }
-        ],
-        "depends_on": null,
-        "id": "example-configuration",
-        "title": "Example Configuration",
-        "type": "menu"
-    },
-    {
-        "children": [
-            {
                 "children": [
                     {
                         "children": [],
