@@ -12,7 +12,7 @@ pygame.display.set_caption("Control de Mira con NXT")
 
 # Posición de la mira
 x, y = WIDTH // 2, HEIGHT // 2
-SPEED = 5  # Velocidad del movimiento de la mira
+SPEED = 10  # Velocidad del movimiento de la mira
 
 running = True
 
@@ -31,10 +31,10 @@ with nxt.locator.find() as brick:
         # Control con flechas
         if keys[pygame.K_LEFT]:
             x -= SPEED
-            motor.run(-50)  # Mueve motor en dirección izquierda
+            motor.run(-100)  # Mueve motor en dirección izquierda
         elif keys[pygame.K_RIGHT]:
             x += SPEED
-            motor.run(50)  # Mueve motor en dirección derecha
+            motor.run(100)  # Mueve motor en dirección derecha
         else:
             motor.brake()
         
