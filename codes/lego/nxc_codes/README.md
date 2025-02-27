@@ -1,1 +1,1 @@
-seguir los pasos de https://github.com/luisballado/nbc-compiler
+`<seguir los pasos>` : <https://github.com/luisballado/nbc-compiler>
