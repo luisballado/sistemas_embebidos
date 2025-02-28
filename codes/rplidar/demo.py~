@@ -1,0 +1,15 @@
+from rplidar import RPLidar
+
+PORT_NAME = '/dev/ttyUSB0'
+
+lidar = RPLidar(PORT_NAME)
+try:
+    for scan in lidar.iter_scans():
+        print(scan)
+        break  # Solo para probar un escaneo
+except Exception as e:
+    print("Error:", e)
+finally:
+    lidar.stop()
+    lidar.stop_motor()
+    lidar.disconnect()
