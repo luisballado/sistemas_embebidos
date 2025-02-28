@@ -1,0 +1,13 @@
+import nxt.locator
+from nxt.motor import Motor, PORT_B
+
+# Automatically find the NXT brick
+brick = nxt.locator.find_one_brick()
+
+print(f"Connected to {brick.get_device_info()[0]}")
+
+# Make motor B move
+motor = Motor(brick, PORT_B)
+motor.turn(100, 360)  # Power 100, Rotate 360 degrees
+
+brick.close()
