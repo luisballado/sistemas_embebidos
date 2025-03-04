@@ -57,7 +57,7 @@ void loop() {
  digitalWrite(e,0);
  digitalWrite(f,0);
  digitalWrite(g,0);
- delay(100);
+ delay(80);
  digitalWrite(a,0);
  digitalWrite(b,1);
  digitalWrite(c,0);
@@ -65,15 +65,15 @@ void loop() {
  digitalWrite(e,0);
  digitalWrite(f,0);
  digitalWrite(g,0);
- delay(100);
-  digitalWrite(a,0);
+ delay(80);
+ digitalWrite(a,0);
  digitalWrite(b,0);
  digitalWrite(c,1);
  digitalWrite(d,0);
  digitalWrite(e,0);
  digitalWrite(f,0);
  digitalWrite(g,0);
- delay(100); 
+ delay(80); 
  digitalWrite(a,0);
  digitalWrite(b,0);
  digitalWrite(c,0);
@@ -81,7 +81,7 @@ void loop() {
  digitalWrite(e,0);
  digitalWrite(f,0);
  digitalWrite(g,0);
- delay(100); 
+ delay(80); 
  digitalWrite(a,0);
  digitalWrite(b,0);
  digitalWrite(c,0);
@@ -89,7 +89,7 @@ void loop() {
  digitalWrite(e,1);
  digitalWrite(f,0);
  digitalWrite(g,0);
- delay(100); 
+ delay(80); 
  digitalWrite(a,0);
  digitalWrite(b,0);
  digitalWrite(c,0);
@@ -97,5 +97,5 @@ void loop() {
  digitalWrite(e,0);
  digitalWrite(f,1);
  digitalWrite(g,0);
- delay(100);
+ delay(80);
 }
