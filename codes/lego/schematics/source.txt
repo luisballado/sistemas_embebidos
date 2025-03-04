@@ -1,3 +1,4 @@
+http://www.inpharmix.com/jps/PID_Controller_For_Lego_Mindstorms_Robots.html
 https://www.brickshelf.com/cgi-bin/gallery.cgi?f=189332
 https://www.nxtprograms.com/index1.html
 https://trivox.tripod.com/lego-nxt-motor-input-output.html
