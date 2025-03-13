@@ -50,53 +50,140 @@ void loop() {
       digitalWrite(15, LOW);
       button1.pressed = false;
   }
-  // for 0
- digitalWrite(a,1);
- digitalWrite(b,0);
- digitalWrite(c,0);
- digitalWrite(d,0);
- digitalWrite(e,0);
- digitalWrite(f,0);
- digitalWrite(g,0);
- delay(80);
- digitalWrite(a,0);
- digitalWrite(b,1);
- digitalWrite(c,0);
- digitalWrite(d,0);
- digitalWrite(e,0);
- digitalWrite(f,0);
- digitalWrite(g,0);
- delay(80);
- digitalWrite(a,0);
- digitalWrite(b,0);
- digitalWrite(c,1);
- digitalWrite(d,0);
- digitalWrite(e,0);
- digitalWrite(f,0);
- digitalWrite(g,0);
- delay(80); 
- digitalWrite(a,0);
- digitalWrite(b,0);
- digitalWrite(c,0);
- digitalWrite(d,1);
- digitalWrite(e,0);
- digitalWrite(f,0);
- digitalWrite(g,0);
- delay(80); 
- digitalWrite(a,0);
- digitalWrite(b,0);
- digitalWrite(c,0);
- digitalWrite(d,0);
- digitalWrite(e,1);
- digitalWrite(f,0);
- digitalWrite(g,0);
- delay(80); 
- digitalWrite(a,0);
- digitalWrite(b,0);
- digitalWrite(c,0);
- digitalWrite(d,0);
- digitalWrite(e,0);
- digitalWrite(f,1);
- digitalWrite(g,0);
- delay(80);
+  Serial.printf("Button has been pressed %u times\n", button1.numberKeyPresses);
+  if (button1.numberKeyPresses == 0){
+      // for 0
+    digitalWrite(a,1);
+    digitalWrite(b,1);
+    digitalWrite(c,1);
+    digitalWrite(d,1);
+    digitalWrite(e,1);
+    digitalWrite(f,1);
+    digitalWrite(g,0);
+  }
+  
+  delay(8);
+  
+  if(button1.numberKeyPresses == 1){
+
+    digitalWrite(a,0);
+    digitalWrite(b,1);
+    digitalWrite(c,1);
+    digitalWrite(d,0);
+    digitalWrite(e,0);
+    digitalWrite(f,0);
+    digitalWrite(g,0);
+  }
+
+ delay(8);
+
+ if(button1.numberKeyPresses == 2){
+
+    digitalWrite(a,1);
+    digitalWrite(b,1);
+    digitalWrite(c,0);
+    digitalWrite(d,1);
+    digitalWrite(e,1);
+    digitalWrite(f,0);
+    digitalWrite(g,1);
+  }
+
+ delay(8);
+
+ if(button1.numberKeyPresses == 3){
+
+    digitalWrite(a,1);
+    digitalWrite(b,1);
+    digitalWrite(c,1);
+    digitalWrite(d,1);
+    digitalWrite(e,0);
+    digitalWrite(f,0);
+    digitalWrite(g,1);
+  }
+
+ delay(8);
+
+ if(button1.numberKeyPresses == 4){
+
+    digitalWrite(a,0);
+    digitalWrite(b,1);
+    digitalWrite(c,1);
+    digitalWrite(d,0);
+    digitalWrite(e,0);
+    digitalWrite(f,1);
+    digitalWrite(g,1);
+  }
+
+ delay(8);
+
+ if(button1.numberKeyPresses == 5){
+
+    digitalWrite(a,1);
+    digitalWrite(b,0);
+    digitalWrite(c,1);
+    digitalWrite(d,1);
+    digitalWrite(e,0);
+    digitalWrite(f,1);
+    digitalWrite(g,1);
+  }
+
+ delay(8);
+
+ if(button1.numberKeyPresses == 6){
+
+    digitalWrite(a,1);
+    digitalWrite(b,0);
+    digitalWrite(c,1);
+    digitalWrite(d,1);
+    digitalWrite(e,1);
+    digitalWrite(f,1);
+    digitalWrite(g,1);
+  }
+
+ delay(8);
+
+ if(button1.numberKeyPresses == 7){
+
+    digitalWrite(a,1);
+    digitalWrite(b,1);
+    digitalWrite(c,1);
+    digitalWrite(d,0);
+    digitalWrite(e,0);
+    digitalWrite(f,0);
+    digitalWrite(g,0);
+  }
+
+ delay(8);
+
+ if(button1.numberKeyPresses == 8){
+
+    digitalWrite(a,1);
+    digitalWrite(b,1);
+    digitalWrite(c,1);
+    digitalWrite(d,1);
+    digitalWrite(e,1);
+    digitalWrite(f,1);
+    digitalWrite(g,1);
+  }
+
+ delay(8);
+
+ if(button1.numberKeyPresses == 9){
+
+    digitalWrite(a,1);
+    digitalWrite(b,1);
+    digitalWrite(c,1);
+    digitalWrite(d,1);
+    digitalWrite(e,0);
+    digitalWrite(f,1);
+    digitalWrite(g,1);
+  }
+
+ delay(8);
+
+  if(button1.numberKeyPresses > 9){
+    button1.numberKeyPresses = 0;
+  }
+
+ 
 }
