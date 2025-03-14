@@ -21,7 +21,7 @@ const int motorEn  = 33;      // Motor enable (PWM speed control)
 
 // PWM configuration for motor speed control
 const int pwmChannel   = 0;
-const int pwmFreq      = 30000;  // Frequency in Hz
+const int pwmFreq      = 3000;  // Frequency in Hz
 const int pwmResolution= 8;     // 8-bit resolution (0-255 duty cycle)
 
 WebServer server(80);
@@ -119,11 +119,11 @@ void handleUpdateServo() {
     String dir = server.arg("dir");
     if (dir == "left") {
       servoAngle -= 5;
-      if (servoAngle < 70) servoAngle = 70;
+      if (servoAngle < 40) servoAngle = 40;
     }
     else if (dir == "right") {
       servoAngle += 5;
-      if (servoAngle > 110) servoAngle = 110;
+      if (servoAngle > 130) servoAngle = 130;
     }
     myServo.write(servoAngle);
     server.send(200, "text/plain", String(servoAngle));
