@@ -1,0 +1,11 @@
+https://www.google.com/search?q=nxt+motor+encoder&client=ubuntu-sn&sca_esv=25cf531ee370dd12&channel=fs&udm=2&biw=2560&bih=1328&ei=vZbOZ97wK8niwN4P1NmY6AE&ved=0ahUKEwiew4HdgP-LAxVJMdAFHdQsBh0Q4dUDCBE&uact=5&oq=nxt+motor+encoder&gs_lp=EgNpbWciEW54dCBtb3RvciBlbmNvZGVySP4UUJUFWPwTcAJ4AJABAJgBeqAB_gaqAQM1LjS4AQPIAQD4AQGYAgOgAv4BwgIEEAAYHsICBhAAGAUYHsICBhAAGAgYHpgDAIgGAZIHAzEuMqAH0Ag&sclient=img#vhid=TRToS3-uYZq6aM&vssid=mosaic
+
+https://www.biasedlogic.com/index.php/running-third-party-motor-with-your-mindstorms-ev3-nxt/
+
+https://trivox.tripod.com/lego-nxt-motor-input-output.html
+
+https://www.philohome.com/lampshade/lampshade.htm
+
+https://www.philohome.com/nxtmotor/nxtmotor.htm
+
+https://do-it-yourself.net/html/lego-nxt.html#oben
