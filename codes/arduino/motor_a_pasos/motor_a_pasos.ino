@@ -1,9 +1,12 @@
+
 int en = 33;
 int in1 = 23;
 int in2 = 32;
 int in3 = 25;
 int in4 = 26;
+
 const int sw = 13;
+
 int swstate;
 const int t = 10;
 int rotations = 0; // Variable to store rotation count

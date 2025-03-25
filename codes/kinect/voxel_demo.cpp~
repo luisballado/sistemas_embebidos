@@ -1,0 +1,116 @@
+#include <iostream>
+#include <vector>
+#include <mutex>
+#include <map>
+#include <cmath>
+#include <libfreenect.hpp>
+#include <opencv2/opencv.hpp>
+#include <open3d/Open3D.h>
+
+class KinectController : public Freenect::FreenectDevice {
+private:
+    std::vector<uint8_t> rgb_buffer;
+    std::vector<uint16_t> depth_buffer;
+    std::mutex data_mutex;
+    bool new_rgb_frame = false;
+    bool new_depth_frame = false;
+
+public:
+    KinectController(freenect_context* ctx, int index)
+        : Freenect::FreenectDevice(ctx, index),
+          rgb_buffer(640 * 480 * 3),
+          depth_buffer(640 * 480) {}
+
+    void VideoCallback(void* rgb, uint32_t timestamp) override {
+        std::lock_guard<std::mutex> lock(data_mutex);
+        memcpy(rgb_buffer.data(), rgb, rgb_buffer.size());
+        new_rgb_frame = true;
+    }
+
+    void DepthCallback(void* depth, uint32_t timestamp) override {
+        std::lock_guard<std::mutex> lock(data_mutex);
+        memcpy(depth_buffer.data(), depth, depth_buffer.size() * sizeof(uint16_t));
+        new_depth_frame = true;
+    }
+
+    bool getRGBD(cv::Mat &rgb, cv::Mat &depth) {
+        std::lock_guard<std::mutex> lock(data_mutex);
+        if (!new_rgb_frame || !new_depth_frame) return false;
+
+        rgb = cv::Mat(480, 640, CV_8UC3, rgb_buffer.data()).clone();
+        cv::cvtColor(rgb, rgb, cv::COLOR_RGB2BGR);
+
+        depth = cv::Mat(480, 640, CV_16UC1, depth_buffer.data()).clone();
+
+        new_rgb_frame = false;
+        new_depth_frame = false;
+        return true;
+    }
+};
+
+// Convert Depth to 3D Points
+std::vector<Eigen::Vector3d> depthToPointCloud(cv::Mat &depth, float fx = 525.0, float fy = 525.0, float cx = 319.5, float cy = 239.5) {
+    std::vector<Eigen::Vector3d> points;
+    for (int y = 0; y < depth.rows; y++) {
+        for (int x = 0; x < depth.cols; x++) {
+            float d = depth.at<uint16_t>(y, x) / 1000.0; // Convert to meters
+            if (d > 0.1 && d < 5.0) { // Filter valid depth values
+                float X = (x - cx) * d / fx;
+                float Y = (y - cy) * d / fy;
+                float Z = d;
+                points.push_back(Eigen::Vector3d(X, Y, Z));
+            }
+        }
+    }
+    return points;
+}
+
+// Convert Point Cloud to Voxels (1m³ resolution)
+std::vector<std::shared_ptr<open3d::geometry::Voxel>> pointCloudToVoxels(std::vector<Eigen::Vector3d> &points, double voxel_size = 1.0) {
+    std::map<Eigen::Vector3i, bool, std::less<Eigen::Vector3i>> voxel_map;
+    for (const auto &p : points) {
+        Eigen::Vector3i voxel_idx(std::round(p[0] / voxel_size), std::round(p[1] / voxel_size), std::round(p[2] / voxel_size));
+        voxel_map[voxel_idx] = true;
+    }
+
+    std::vector<std::shared_ptr<open3d::geometry::Voxel>> voxels;
+    for (const auto &voxel : voxel_map) {
+        auto voxel_ptr = std::make_shared<open3d::geometry::Voxel>(voxel.first.cast<double>() * voxel_size);
+        voxels.push_back(voxel_ptr);
+    }
+
+    return voxels;
+}
+
+int main() {
+    Freenect::Freenect freenect;
+    KinectController &kinect = freenect.createDevice<KinectController>(0);
+    kinect.startVideo();
+    kinect.startDepth();
+
+    auto voxel_grid = std::make_shared<open3d::geometry::VoxelGrid>();
+
+    while (true) {
+        cv::Mat rgb, depth;
+        if (kinect.getRGBD(rgb, depth)) {
+            std::vector<Eigen::Vector3d> points = depthToPointCloud(depth);
+            std::vector<std::shared_ptr<open3d::geometry::Voxel>> voxels = pointCloudToVoxels(points);
+
+            voxel_grid->voxels_ = voxels;
+            voxel_grid->voxel_size_ = 1.0; // 1m³ resolution
+
+            // Display in Open3D
+            auto vis = std::make_shared<open3d::visualization::Visualizer>();
+            vis->CreateVisualizerWindow("Voxelized Kinect", 800, 600);
+            vis->AddGeometry(voxel_grid);
+            vis->Run();
+            vis->DestroyVisualizerWindow();
+        }
+
+        if (cv::waitKey(1) == 27) break; // Press 'ESC' to exit
+    }
+
+    kinect.stopVideo();
+    kinect.stopDepth();
+    return 0;
+}
